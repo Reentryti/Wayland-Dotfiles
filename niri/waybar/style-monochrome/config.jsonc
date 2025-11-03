@@ -1,0 +1,145 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "top",
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    //  Modules on the left corner
+    "modules-left": [
+        "custom/arch",
+        "niri/workspaces"
+    ],
+    //  Modules on the center
+    "modules-center": [
+        "niri/window"
+    ],
+    //  Modules on the right corner
+    "modules-right": [
+        "clock",
+        "group/data",
+        "group/wire",
+        "tray",
+        "group/on"
+    ],
+    //  Group creation
+    "group/wire": {
+        "orientation": "horizontal",
+        "modules": [
+            "network",
+            "bluetooth",
+            "pulseaudio"
+        ]
+    },
+    "group/data": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/pacman",
+            "cpu"
+        ]
+    },
+    "group/on": {
+        "orientation": "horizontal",
+        "modules": [
+            "idle_inhibitor",
+            "custom/power"
+        ]
+    },
+    // Modules configuration
+    //Workspaces
+    "niri/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": "",
+            "default": ""
+        }
+    },
+    //Idle Inhibitor 
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    //Tray
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    },
+    //Clock
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+            "format": {
+                "today": "<span color='#fAfBfC'><b>{}</b></span>"
+            }
+        },
+        "format-alt": "{:%d-%B-%y}"
+    },
+    //CPU usage
+    "cpu": {
+        "format": " {usage}",
+        "tooltip": false,
+        "max-length": 10,
+        "interval": 15
+    },
+    //Network connection
+    "network": {
+        "format-wifi": " ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "⚠ ",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    //Audio control
+    "pulseaudio": {
+        "scroll-step": 1,
+        "format": "{icon}",
+        "format-muted": "{icon} {volume}%",
+        "format-icons": {
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "on-click": "pavucontrol",
+        "tooltip": "{volume}%"
+    },
+    //Bluetooth
+    "bluetooth": {
+        "format": " ",
+        "format-connected": " ",
+        "format-connected-battery": " ",
+        "tooltip-format": "{status}\t{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+        "on-click": "blueman-manager"
+    },
+    //  Custom modules
+    //Power
+    "custom/power": {
+        "format": "⏻",
+        "tooltip": false,
+        "on-click": "nwg-bar"
+    },
+    //Packages 
+    "custom/pacman": {
+        "format": "󰅢  {}",
+        "interval": 30,
+        "exec": "checkupdates | wc -l",
+        "signal": 8,
+        "tooltip": false
+    },
+    //Arch 
+    "custom/arch": {
+        "format": " ",
+        "tooltip": false,
+        "on-click": "pkill -x wofi || true; wofi --show drun >/dev/null 2>&1",
+        "interval": "once"
+    }
+}

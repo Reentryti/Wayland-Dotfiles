@@ -1,0 +1,84 @@
+* {
+    all: unset;
+    font-family: 'JetBrains Nerd Font';
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: black;
+}
+
+window {
+    filter: grayscale(100%);
+}
+
+/*Selector for the entire wofi window*/
+#window {
+    all: unset;
+    background-color: rgba(85, 164, 252, 0.6);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/*Selector for a box that everything else sits inside of*/
+#outer-box {
+    border: none;
+}
+
+/*Selector for the box containing all entries*/
+#inner-box {
+    border: none;
+    margin: 10px;
+    background-color: inherit;
+}
+
+/*Selector for the text box for filtering items*/
+#input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#input image {
+    padding-right: 10px;
+}
+
+/*Selector for the scroll window containing inner box*/
+#scroll {}
+
+/*Selector for the box containing text and images*/
+#entry {
+    padding: 10px;
+    margin: 6px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+}
+
+#entry arrow {
+    border-radius: 10;
+    color: rgba(180, 190, 254, 1);
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, .7)
+}
+
+#entry:selected {
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, .3);
+    border: none;
+    background-color: rgba(254, 132, 184, .7);
+}
+
+/*Selector for the box containing the name of the program*/
+#text {
+    margin: 5px;
+    padding-left: 20px;
+    outline: none;
+}
+
+/*Selector for the images displayed in entries*/
+#images {
+    outline: none;
+}

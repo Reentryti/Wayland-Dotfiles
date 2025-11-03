@@ -1,0 +1,9 @@
+ignore-empty-password
+font=JetBrains Mono Nerd
+
+clock
+timestr=%R
+datestr=%a, %e of %B
+
+screenshots
+
