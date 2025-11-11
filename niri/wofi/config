@@ -1,0 +1,9 @@
+mode = drun
+allow_images = true
+image_size = 32
+width = 500
+height =  400
+hide_scroll = true
+term = kitty
+show = drun
+prompt = Fuzzing ??
