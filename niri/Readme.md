@@ -16,5 +16,4 @@ This repository contains my personal dotfiles for configuring a **minimal, beaut
 
 ---
 
-![Preview]
-(https://github.com/Reentryti/Wayland-Dotfiles/blob/master/wallpaper/alena-aenami-endless-1k.jpg)
+![Preview](https://github.com/Reentryti/Wayland-Dotfiles/blob/master/src/preview/Preview1.png)
