@@ -1,0 +1,151 @@
+* {
+    font-size: 16px;
+    font-family: "JetBrainsMono Nerd Font", Roboto, Arial, Helvetica, sans-serif;
+    min-width: 8px;
+    min-height: 0px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+    padding: 0px;
+
+}
+
+window#waybar {
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    border-radius: 8px;
+    border: 2px solid #5a5149;
+    background: #191919;
+    color: lighter(#5a5149);
+}
+
+menu,
+tooltip {
+    border-radius: 8px;
+    padding: 5px;
+    border: 1px solid lighter(#5a5149);
+    background: alpha(#191919, 0.6);
+
+    color: lighter(#5a5149);
+}
+
+menu label,
+tooltip label {
+    font-size: 14px;
+    color: lighter(#5a5149);
+}
+
+#tray>.needs-attention {
+    animation-name: blink-active;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.modules-right {
+    margin: 0px 6px 6px 6px;
+    border-radius: 4px;
+    background: alpha(#191919, 0.4);
+    color: lighter(#5a5149);
+}
+
+.modules-left {
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    margin: 6px 6px 6px 6px;
+    border-radius: 4px;
+    background: alpha(#191919, 0.4);
+    color: lighter(#5a5149);
+}
+
+#hard,
+#custom-sunset,
+#memory,
+#disk,
+#custom-recorder,
+#connection,
+#brightness,
+#power,
+#custom-arch,
+#custom-updates,
+#tray,
+#audio,
+#privacy {
+    border-radius: 4px;
+    margin: 2px 2px 4px 2px;
+    background: alpha(darker(#5a5149), 0.3);
+}
+
+#custom-notifications {
+    padding-left: 4px;
+    font-size: 14px;
+}
+
+#custom-arch {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding-left: 5px;
+}
+
+#privacy-item {
+    padding: 6px 0px 6px 6px;
+}
+
+#disk,
+#memory,
+#cpu {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#network.wifi {
+    padding-right: 4px;
+}
+
+#tray {
+    padding: 4px 0px 4px 0px;
+}
+
+#bluetooth {
+    padding-top: 2px;
+}
+
+#clock {
+    font-weight: bold;
+    padding: 4px 2px 2px 2px;
+    color: white;
+}
+
+
+#bluetooth.discoverable,
+#bluetooth.discovering,
+#bluetooth.pairable {
+    border-radius: 8px;
+    animation-name: blink-active;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink-active {
+    to {
+        background-color: #5a5149;
+        color: #c5c5c5;
+    }
+}
+
+@keyframes blink-red {
+    to {
+        background-color: #c64d4f;
+        color: #c5c5c5;
+    }
+}
+
+@keyframes blink-yellow {
+    to {
+        background-color: #cf9022;
+        color: #c5c5c5;
+    }
+}
