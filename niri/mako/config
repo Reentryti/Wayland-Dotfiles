@@ -1,9 +1,12 @@
 mode = drun
 allow_images = true
 image_size = 32
-width = 500
-height =  400
+width = 400
+height = 450
 hide_scroll = true
 term = kitty
 show = drun
-prompt = Darker ??
+location = center
+yoffset = 90
+xoffset = 1150
+prompt = Fuzzing ...
