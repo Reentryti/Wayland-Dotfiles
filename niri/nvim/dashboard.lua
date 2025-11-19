@@ -1,3 +1,16 @@
+-- Reads ascii art file & return its content as a line text
+-- so the ascii art can be modified without editing dashboard lua config
+local function read_ascii_file(path)
+    local file = io.open(path, "r")
+    if not file then return {} end
+    local lines = {}
+    for line in file:lines() do
+        table.insert(lines, line)
+    end
+    file:close()
+    return lines
+end
+
 return {
     'nvimdev/dashboard-nvim',
     event = 'VimEnter',
@@ -20,19 +33,8 @@ return {
             config = {
                 --Uncomment to display day on dashboard
                 --week_header = { enable = true },
-                header = {
-                    '@@@@@@@   @@@@@@@@  @@@@@@@@  @@@  @@@  ',
-                    '@@@@@@@@  @@@@@@@@  @@@@@@@@  @@@@ @@@  ',
-                    '@@!  @@@  @@!       @@!       @@!@!@@@  ',
-                    '!@!  @!@  !@!       !@!       !@!!@!@!  ',
-                    '@!@!!@!   @!!!:!    @!!!:!    @!@ !!@!  ',
-                    '!!@!@!    !!!!!:    !!!!!:    !@!  !!!  ',
-                    '!!: :!!   !!:       !!:       !!:  !!!  ',
-                    ':!:  !:!  :!:       :!:       :!:  !:!  ',
-                    '::   :::   :: ::::   :: ::::   ::   ::  ',
-                    ' :   : :  : :: ::   : :: ::   ::    :   ',
-                    '',
-                },
+                header = read_ascii_file(vim.fn.stdpath('config') .. '/ascii_header.txt'),
+
                 --Center display shortcuts
                 center = {
                     {
