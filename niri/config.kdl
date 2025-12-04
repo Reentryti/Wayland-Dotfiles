@@ -1,5 +1,9 @@
 //  Niri configuration files
 
+//Include files
+include "binds.kdl" //binds 
+include "window-rule.kdl" //window rules
+include "app.kdl" //startup application
 
 //  Environment variables
 environment {
@@ -105,6 +109,27 @@ window-rule {
 window-rule {
     geometry-corner-radius 10
     clip-to-geometry true
+}
+
+//Alt+Tab behavior
+recent-windows{
+    debounce-ms 750
+    open-delay-ms 150
+    highlight{
+        active-color #
+        urgent-color #
+        padding 30
+        corner-radius 0
+    }
+
+    previews{
+        max-height 400
+        max-scale 0.5 
+    } 
+    binds{
+        Alt+Tab         { next-window; }
+        Alt+Shift+Tab   { previous-window; }
+    }
 }
 
 //  StartUp
