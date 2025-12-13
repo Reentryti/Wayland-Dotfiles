@@ -116,8 +116,8 @@ recent-windows{
     debounce-ms 750
     open-delay-ms 150
     highlight{
-        active-color #
-        urgent-color #
+        //active-color #
+        //urgent-color #
         padding 30
         corner-radius 0
     }
