@@ -1,0 +1,17 @@
+mode = drun
+allow_images = true
+image_size = 32
+width = 60
+height = 840
+hide_scroll = true
+term = kitty
+show = drun
+location = center
+yoffset = 10
+xoffset = 10
+prompt = Fuzzing ...
+key_exit= ESC
+columns = 1
+hide_search = true
+no_actions = true
+key_hide_search = ALT

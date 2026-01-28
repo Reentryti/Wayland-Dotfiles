@@ -1,0 +1,93 @@
+* {
+    all: unset;
+    font-family: 'Noto Sans Black';
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: white;
+}
+
+window {
+    background: transparent;
+}
+
+/*Selector for the entire wofi window*/
+#window {
+    all: unset;
+    /*background-color: rgba(119, 41, 37, 0.9);*/
+    background-color: #1e202c;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/*Selector for a box that everything else sits inside of*/
+#outer-box {
+    border: none;
+    background-color: transparent;
+}
+
+/*Selector for the box containing all entries*/
+#inner-box {
+    border: none;
+    outline: none;
+    background-color: inherit;
+}
+
+/*Selector for the text box for filtering items*/
+#input {
+    /*border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);*/
+}
+
+#input image {
+    padding-right: 10px;
+}
+
+/*Selector for the scroll window containing inner box*/
+#scroll {}
+
+/*Selector for the box containing text and images*/
+#entry {
+    padding: 0 8;
+    margin: 6px;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 90%;
+    border-radius: 10px;
+}
+
+#expander-box image {
+    border: 1px solid white;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    font-size: 0;
+    -gtk-icon-transform: scale(0);
+}
+
+#entry:selected {
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, .3);
+    border: none;
+    background-color: rgba(96, 81, 155, .8);
+}
+
+/*Selector for the box containing the name of the program*/
+#text {
+    font-size: 0px;
+    /*margin: 5px;
+    padding-left: 20px;
+    outline: none;*/
+}
+
+/*Selector for the images displayed in entries*/
+#images {
+    outline: none;
+}
